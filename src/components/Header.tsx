@@ -55,9 +55,13 @@ export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8 xl:px-12">
-        <a href="#inicio" className="text-sm font-semibold tracking-wide text-white">
-          Diego Hartwig
-        </a>
+      <a href="#inicio" className="flex items-center">
+        <img
+          src="logo.png"
+          alt="Logo Diego Hartwig"
+          className="h-12 sm:h-14 md:h-16 lg:h-[72px] w-auto object-contain"
+        />
+      </a>
         <button
           type="button"
           className="inline-flex rounded-lg border border-white/15 p-2 text-slate-200 transition hover:border-cyan-300/50 hover:text-white md:hidden"
