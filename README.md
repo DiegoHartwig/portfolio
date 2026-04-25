@@ -28,3 +28,4 @@ diegohartwig-portfolio/
 ├── vite.config.ts
 ├── tailwind.config.ts
 └── README.md
+
