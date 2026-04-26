@@ -24,11 +24,7 @@ export function Hero() {
           Tecnologia aplicada a problemas reais
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-slate-300 md:text-lg">
-          Atuo há mais de 15 anos em tecnologia, com foco na construção de soluções robustas em Engenharia de Dados e Inteligência Artificial Aplicada.
-
-          Minha atuação combina uma base sólida em Engenharia de Software com experiência prática em ambientes de produção, incluindo sistemas críticos, pipelines de dados e arquiteturas escaláveis.
-
-          Ao longo da minha trajetória, venho aplicando princípios de engenharia para transformar dados em soluções confiáveis, sustentáveis e orientadas a resultado.
+          Atuo há mais de 15 anos em tecnologia, construindo soluções robustas em diferentes contextos de software, dados e automação. Minha trajetória combina uma base sólida em Engenharia de Software com atuação prática em Engenharia de Dados e Inteligência Artificial Aplicada, participando da construção de pipelines, plataformas de dados e arquiteturas escaláveis em ambientes de produção. Ao longo desse caminho, venho aplicando princípios de engenharia para transformar dados e tecnologia em soluções confiáveis, sustentáveis e orientadas a resultado.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
