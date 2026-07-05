@@ -4,6 +4,9 @@ export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Plus Jakarta Sans"', "Inter", "system-ui", "sans-serif"],
+      },
       colors: {
         deep: "#061226",
         cyanSoft: "#2dd4bf",
@@ -11,7 +14,8 @@ export default {
         ice: "#e2e8f0"
       },
       boxShadow: {
-        card: "0 10px 30px rgba(2, 6, 23, 0.35)"
+        card: "0 10px 30px rgba(2, 6, 23, 0.35)",
+        "card-hover": "0 20px 40px rgba(2, 6, 23, 0.5)"
       },
       backgroundImage: {
         "hero-gradient":
