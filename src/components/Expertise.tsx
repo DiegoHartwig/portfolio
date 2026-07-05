@@ -67,7 +67,7 @@ export function Expertise() {
           transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.12, ease: "easeOut" }}
           className="mt-3 max-w-2xl text-slate-300"
         >
-Minha trajetória combina uma base sólida em Engenharia de Software com atuação em Engenharia de Dados e visão aplicada de IA. Na prática, trabalho com pipelines, plataformas, modelagem, transformação e integração entre sistemas.
+        Minha trajetória combina uma base sólida em Engenharia de Software com atuação em Engenharia de Dados e visão aplicada de IA. Na prática, trabalho com pipelines, plataformas, modelagem, transformação e integração entre sistemas.
         </motion.p>
 
         <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-6">
