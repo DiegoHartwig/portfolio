@@ -3,23 +3,43 @@ import type { Config } from "tailwindcss";
 export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
+    container: {
+      center: true,
+      padding: "1.25rem"
+    },
     extend: {
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', "Inter", "system-ui", "sans-serif"],
+        sans: ['"Inter"', "system-ui", "-apple-system", "sans-serif"],
+        serif: ['"Newsreader"', "ui-serif", "Georgia", "serif"]
       },
       colors: {
-        deep: "#061226",
-        cyanSoft: "#2dd4bf",
-        graphite: "#111827",
-        ice: "#e2e8f0"
+        cream: "#F6F4EF",
+        surface: "#EEEEE9",
+        ink: "#182422",
+        stone: "#586763",
+        forest: {
+          DEFAULT: "#183830",
+          deep: "#122E28"
+        },
+        bronze: {
+          DEFAULT: "#A17C4A",
+          light: "#BC9865"
+        },
+        line: "#D9D4CA",
+        onDark: "#F5F3EE",
+        // Identidade visual (símbolo e hero imersivo) — ver docs/IDENTIDADE_VISUAL.md
+        brandDark: "#061D1A",
+        brandInk: "#1A3028",
+        brandGold: "#D9B477",
+        brandTeal: "#2EC89F",
+        brandBlue: "#3388F6"
+      },
+      maxWidth: {
+        content: "1320px"
       },
       boxShadow: {
-        card: "0 10px 30px rgba(2, 6, 23, 0.35)",
-        "card-hover": "0 20px 40px rgba(2, 6, 23, 0.5)"
-      },
-      backgroundImage: {
-        "hero-gradient":
-          "radial-gradient(circle at top right, rgba(45, 212, 191, 0.18), transparent 35%), radial-gradient(circle at top left, rgba(59, 130, 246, 0.16), transparent 28%)"
+        subtle: "0 1px 2px rgba(24, 36, 34, 0.04)",
+        card: "0 8px 24px -12px rgba(24, 36, 34, 0.12)"
       }
     }
   },

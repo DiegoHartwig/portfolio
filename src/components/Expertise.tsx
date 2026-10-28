@@ -1,99 +1,88 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { Database, Code2, Cpu, Server } from "lucide-react";
 
-const expertiseAreas = [
+const disciplines = [
   {
-    icon: Database,
-    title: "Engenharia de Dados",
-    description:
-      "Construção de pipelines, modelos, transformações e plataformas de dados com foco em confiabilidade, rastreabilidade e aplicação prática.",
-    tools: ["Apache Spark", "dbt", "Apache Airflow", "Trino", "Delta Lake", "OpenMetadata"],
-    span: "lg:col-span-4",
-  },
-  {
-    icon: Code2,
+    number: "01",
     title: "Engenharia de Software",
     description:
-      "Base em arquitetura, integração entre sistemas, APIs, sustentação e boas práticas para soluções robustas e evolutivas.",
-    tools: ["Python", ".NET / C#", "Microservices", "Event-Driven", "CI/CD"],
-    span: "lg:col-span-2",
+      "Arquitetura, integração entre sistemas, desenvolvimento de aplicações e evolução de soluções que precisam ser compreensíveis, resilientes e sustentáveis.",
+    tags: "ARQUITETURA DE SISTEMAS · APIS · PYTHON · INTEGRAÇÕES"
   },
   {
-    icon: Cpu,
-    title: "IA Aplicada",
+    number: "02",
+    title: "Engenharia de Dados",
     description:
-      "Aplicação de IA com visão de engenharia: dados confiáveis, contexto bem definido, validação, integração com ferramentas e uso real.",
-    tools: ["LLMs", "RAG", "Agentes", "OCR", "Visão Computacional", "MLOps"],
-    span: "lg:col-span-2",
+      "Desenho de pipelines, plataformas analíticas, processamento distribuído, orquestração, modelagem e governança para transformar dados em ativos confiáveis.",
+    tags: "SPARK · AIRFLOW · DBT · TRINO · LAKEHOUSE"
   },
   {
-    icon: Server,
-    title: "Plataformas e Ambientes Reais",
+    number: "03",
+    title: "Inteligência Artificial Aplicada",
     description:
-      "Estruturação de ambientes, automações, orquestrações e integrações que precisam operar de forma consistente em cenários reais.",
-    tools: ["Kubernetes", "MinIO / Ceph", "Hive Metastore", "Linux", "Observabilidade"],
-    span: "lg:col-span-4",
-  },
+      "Uso de IA conectado a necessidades concretas: preparação de dados, soluções com modelos de linguagem, recuperação de informação e integração com sistemas reais.",
+    tags: "LLMS · RAG · AGENTES · IA EM PRODUTOS"
+  }
 ];
 
 export function Expertise() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="especialidades" className="py-20 md:py-24">
-      <div className="mx-auto max-w-6xl px-5 md:px-8 xl:px-12">
+    <section id="atuacao" className="py-20 md:py-28">
+      <div className="mx-auto max-w-content px-5 md:px-8 xl:px-12">
         <motion.p
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, ease: "easeOut" }}
-          className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400"
+          className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-stone"
         >
-          Especialidades
-        </motion.p>
-        <motion.h2
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.06, ease: "easeOut" }}
-          className="text-3xl font-extrabold tracking-tight text-white md:text-4xl"
-        >
-          Engenharia aplicada a ambientes reais
-        </motion.h2>
-        <motion.p
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.12, ease: "easeOut" }}
-          className="mt-3 max-w-2xl text-slate-300"
-        >
-        Minha trajetória combina uma base sólida em Engenharia de Software com atuação em Engenharia de Dados e visão aplicada de IA. Na prática, trabalho com pipelines, plataformas, modelagem, transformação e integração entre sistemas.
+          01 / Atuação
         </motion.p>
 
-        <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-6">
-          {expertiseAreas.map((area, index) => (
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1px_1fr] lg:gap-12">
+          <motion.h2
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.06, ease: "easeOut" }}
+            className="font-serif text-3xl font-medium leading-tight tracking-tight text-ink md:text-4xl"
+          >
+            Três disciplinas.
+            <br />
+            Uma visão de <em className="font-serif italic text-bronze">engenharia.</em>
+          </motion.h2>
+
+          <div className="hidden bg-line lg:block" aria-hidden="true" />
+
+          <motion.p
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.12, ease: "easeOut" }}
+            className="border-l-2 border-bronze/40 pl-5 text-stone lg:border-l-0 lg:pl-0"
+          >
+            Tecnologia exige decisões conectadas. Combino experiência no desenvolvimento de
+            sistemas com a construção de plataformas de dados e a aplicação criteriosa de
+            inteligência artificial.
+          </motion.p>
+        </div>
+
+        <div className="mt-16 divide-y divide-line border-t border-line">
+          {disciplines.map((item, index) => (
             <motion.article
-              key={area.title}
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+              key={item.title}
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
-              className={`group rounded-2xl border border-slate-700/30 bg-slate-900/50 p-6 shadow-card backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-500/50 hover:shadow-[0_12px_28px_-10px_rgba(2,6,23,0.7)] ${area.span}`}
+              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+              className="grid grid-cols-1 gap-2 py-8 sm:grid-cols-[72px_1fr] sm:gap-8"
             >
-              <div className="mb-4 inline-flex rounded-lg border border-slate-600/30 bg-slate-800/50 p-2.5">
-                <area.icon size={20} className="text-slate-400" />
-              </div>
-              <h3 className="text-lg font-bold text-white">{area.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-300">{area.description}</p>
-              <div className="mt-4 flex flex-wrap gap-1.5">
-                {area.tools.map((tool) => (
-                  <span
-                    key={tool}
-                    className="rounded border border-white/10 bg-white/5 px-2 py-0.5 text-xs font-medium text-slate-300"
-                  >
-                    {tool}
-                  </span>
-                ))}
+              <p className="text-xs font-semibold uppercase tracking-wider text-bronze">{item.number}</p>
+              <div>
+                <h3 className="font-serif text-xl font-medium text-ink">{item.title}</h3>
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-stone">{item.description}</p>
+                <p className="mt-5 text-xs font-medium uppercase tracking-wide text-stone">{item.tags}</p>
               </div>
             </motion.article>
           ))}

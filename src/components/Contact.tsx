@@ -3,74 +3,70 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const contactLinks = [
   {
-    href: "https://www.linkedin.com/in/diegohartwig/",
-    label: "LinkedIn",
-    description: "Conecte-se e acompanhe publicações técnicas",
-    icon: Linkedin,
-    external: true,
-    primary: true,
+    href: "mailto:hartwig.diego@gmail.com",
+    label: "E-mail profissional",
+    description: "Contato direto e oportunidades",
+    icon: Mail,
+    external: false
   },
   {
-    href: "mailto:hartwig.diego@gmail.com",
-    label: "E-mail",
-    description: "Para projetos, propostas ou colaboração",
-    icon: Mail,
-    external: false,
-    primary: false,
+    href: "https://www.linkedin.com/in/diegohartwig/",
+    label: "LinkedIn",
+    description: "Trajetória e conexões profissionais",
+    icon: Linkedin,
+    external: true
   },
   {
     href: "https://github.com/diegohartwig",
     label: "GitHub",
-    description: "Projetos, código e repositórios públicos",
+    description: "Código e repositórios públicos",
     icon: Github,
-    external: true,
-    primary: false,
-  },
+    external: true
+  }
 ];
 
 export function Contact() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="contato" className="py-20 md:py-24">
-      <div className="mx-auto max-w-5xl px-5 md:px-8 xl:px-12">
-        <motion.div
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+    <section id="contato" className="py-20 md:py-28">
+      <div className="mx-auto max-w-content px-5 md:px-8 xl:px-12">
+        <motion.p
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, ease: "easeOut" }}
-          className="rounded-2xl border border-slate-700/30 bg-slate-900/60 p-8 shadow-card md:p-12"
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, ease: "easeOut" }}
+          className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-stone"
         >
-          <motion.p
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.06, ease: "easeOut" }}
-            className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400"
-          >
-            Contato
-          </motion.p>
-          <motion.h2
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.1, ease: "easeOut" }}
-            className="text-2xl font-extrabold tracking-tight text-white md:text-3xl"
-          >
-            Vamos conversar sobre dados, software e IA aplicada a problemas reais?
-          </motion.h2>
-          <motion.p
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.15, ease: "easeOut" }}
-            className="mt-4 max-w-xl text-slate-300"
-          >
-            Aberto a conexões profissionais, trocas técnicas e conversas sobre engenharia, dados,
-            arquitetura e soluções aplicáveis em ambientes reais.
-          </motion.p>
+          06 / Contato
+        </motion.p>
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+          <div>
+            <motion.h2
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.06, ease: "easeOut" }}
+              className="font-serif text-3xl font-medium leading-tight tracking-tight text-ink md:text-4xl"
+            >
+              Boas ideias surgem quando
+              <br />
+              diferentes <em className="font-serif italic text-bronze">perspectivas se encontram.</em>
+            </motion.h2>
+            <motion.p
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.12, ease: "easeOut" }}
+              className="mt-5 max-w-md text-stone"
+            >
+              Aberto a conexões profissionais e conversas sobre arquitetura de software,
+              plataformas de dados, IA aplicada e desafios de engenharia.
+            </motion.p>
+          </div>
+
+          <div className="divide-y divide-line border-t border-line lg:border-t-0">
             {contactLinks.map((item, index) => (
               <motion.a
                 key={item.label}
@@ -83,34 +79,25 @@ export function Contact() {
                 transition={
                   shouldReduceMotion
                     ? { duration: 0 }
-                    : { duration: 0.45, delay: 0.2 + index * 0.08, ease: "easeOut" }
+                    : { duration: 0.45, delay: 0.1 + index * 0.08, ease: "easeOut" }
                 }
-                className={`group flex flex-col gap-3 rounded-xl p-4 transition-all duration-200 ${
-                  item.primary
-                    ? "border border-slate-600/40 bg-slate-800/50 hover:border-slate-500/60 hover:bg-slate-800/70"
-                    : "border border-slate-700/25 bg-slate-900/40 hover:border-slate-600/40 hover:bg-slate-800/50"
-                }`}
+                className="group flex items-center justify-between gap-4 py-5 first:pt-0"
               >
-                <div className="flex items-center justify-between">
-                  <item.icon
-                    size={18}
-                    className="text-slate-400"
-                  />
-                  <ArrowRight
-                    size={14}
-                    className="text-slate-600 transition-transform duration-200 group-hover:translate-x-0.5"
-                  />
+                <div className="flex items-center gap-4">
+                  <item.icon size={18} className="shrink-0 text-forest" />
+                  <div>
+                    <p className="text-sm font-bold text-ink">{item.label}</p>
+                    <p className="mt-0.5 text-xs text-stone">{item.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm font-bold text-white">
-                    {item.label}
-                  </p>
-                  <p className="mt-0.5 text-xs text-slate-400">{item.description}</p>
-                </div>
+                <ArrowRight
+                  size={16}
+                  className="shrink-0 text-stone transition-transform duration-200 group-hover:translate-x-0.5"
+                />
               </motion.a>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

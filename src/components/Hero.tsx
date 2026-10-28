@@ -1,130 +1,91 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { Github, Linkedin, BriefcaseBusiness, Database, Code2, Cpu, Server } from "lucide-react";
-
-const authorityItems = [
-  { icon: Server, value: "15+ anos", label: "trajetória em tecnologia" },
-  { icon: Database, value: "Dados", label: "pipelines e plataformas" },
-  { icon: Code2, value: "Software", label: "sistemas e integrações" },
-  { icon: Cpu, value: "IA Aplicada", label: "arquiteturas e automação" },
-];
-
-const techStack = ["Spark", "dbt", "Airflow", "Trino", "Python", "Delta Lake", "Kubernetes"];
+import { ArrowRight } from "lucide-react";
+import { Header } from "./Header";
 
 export function Hero() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section
-      id="inicio"
-      className="relative overflow-hidden pt-20 pb-16 md:pt-28 md:pb-24 lg:pt-32 lg:pb-28"
-    >
-      <div className="mx-auto max-w-6xl px-5 md:px-8 xl:px-12">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_460px] lg:gap-14">
+    <section id="inicio" className="hero-scene relative text-onDark">
+      <Header />
 
-          {/* Left: headline and CTAs */}
-          <div>
-            <motion.p
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.55, ease: "easeOut" }}
-              className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-400"
-            >
-              ENGENHARIA DE DADOS • SOFTWARE • IA APLICADA
-            </motion.p>
-            <motion.h1
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, delay: 0.08, ease: "easeOut" }}
-              className="text-[clamp(2rem,5.5vw,3.5rem)] font-extrabold leading-[1.05] tracking-tight text-white"
-            >
-              Engenharia de Dados, Software e IA Aplicada para ambientes reais
-            </motion.h1>
-            <motion.p
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.55, delay: 0.16, ease: "easeOut" }}
-              className="mt-6 max-w-[58ch] text-base leading-relaxed text-slate-300 md:text-lg"
-            >
-              Mais de 15 anos em tecnologia, com base consolidada em Engenharia de Software e atuação atual voltada à Engenharia de Dados e Inteligência Artificial Aplicada.
-            </motion.p>
-            <motion.div
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.24, ease: "easeOut" }}
-              className="mt-8 flex flex-wrap gap-3"
-            >
-              <a
-                href="https://www.linkedin.com/in/diegohartwig/"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-cyan-500/30 bg-cyan-500/15 px-5 py-2.5 text-sm font-semibold text-cyan-200 transition-all duration-200 hover:border-cyan-400/50 hover:bg-cyan-500/25 hover:text-white"
-              >
-                <Linkedin size={15} />
-                Conectar no LinkedIn
-              </a>
-              <a
-                href="#especialidades"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-5 py-2.5 text-sm font-semibold text-slate-200 transition-all duration-200 hover:border-white/30 hover:bg-white/5 hover:text-white"
-              >
-                <BriefcaseBusiness size={15} />
-                Ver especialidades
-              </a>
-              <a
-                href="https://github.com/diegohartwig"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-5 py-2.5 text-sm font-semibold text-slate-200 transition-all duration-200 hover:border-white/30 hover:bg-white/5 hover:text-white"
-              >
-                <Github size={15} />
-                GitHub
-              </a>
-            </motion.div>
-          </div>
-
-          {/* Right: authority panel — desktop only */}
-          <motion.div
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+      <div className="relative mx-auto max-w-content px-5 pb-28 pt-6 md:px-8 md:pb-32 lg:px-12 lg:pb-36 lg:pt-10 xl:px-16">
+        <div className="max-w-[46rem]">
+          <motion.p
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, delay: 0.1, ease: "easeOut" }}
-            className="hidden lg:block"
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, ease: "easeOut" }}
+            className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-onDark/80"
           >
-            <div className="rounded-2xl border border-slate-700/30 bg-slate-900/70 p-5 shadow-card backdrop-blur-sm">
-              <div className="grid grid-cols-2 gap-2.5">
-                {authorityItems.map((item) => (
-                  <div
-                    key={item.value}
-                    className="rounded-xl border border-slate-700/25 bg-[#050c1a]/80 p-4 transition-all duration-300 hover:border-slate-600/40 hover:bg-slate-900/60"
-                  >
-                    <item.icon size={15} className="mb-2.5 text-slate-400" />
-                    <p className="text-sm font-bold leading-tight text-white">{item.value}</p>
-                    <p className="mt-0.5 text-xs leading-snug text-slate-500">{item.label}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4 border-t border-slate-700/25 pt-4">
-                <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-600">
-                  Stack principal
-                </p>
-                <div className="flex flex-wrap gap-1.5">
-                  {techStack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="rounded border border-slate-700/40 bg-slate-800/50 px-2 py-0.5 text-xs font-medium text-slate-400"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brandGold" aria-hidden="true" />
+            Engenharia de Software <span className="text-brandGold">/</span> Dados{" "}
+            <span className="text-brandGold">/</span> IA Aplicada
+          </motion.p>
+
+          <motion.h1
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, delay: 0.08, ease: "easeOut" }}
+            className="mt-7 font-sans text-[clamp(2.5rem,5.4vw,4.75rem)] font-semibold leading-[1.04] tracking-tight text-onDark"
+          >
+            Engenharia para{" "}
+            <em className="font-serif text-[0.92em] italic font-medium text-brandGold">problemas reais.</em>
+          </motion.h1>
+
+          <motion.p
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.55, delay: 0.16, ease: "easeOut" }}
+            className="mt-7 max-w-[52ch] text-base leading-relaxed text-onDark/85 [text-shadow:0_2px_18px_rgba(0,0,0,0.25)] md:text-lg"
+          >
+            Projeto e evoluo sistemas, plataformas de dados e soluções de inteligência
+            artificial aplicada, com visão de arquitetura, confiabilidade e operação em
+            ambientes reais.
+          </motion.p>
+
+          <motion.div
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.24, ease: "easeOut" }}
+            className="mt-10 flex flex-wrap items-center gap-7"
+          >
+            <a
+              href="#atuacao"
+              className="inline-flex items-center gap-2 rounded-[3px] bg-brandGold px-5 py-3.5 text-sm font-bold text-brandDark shadow-[0_12px_40px_rgba(0,0,0,0.2)] transition-colors duration-200 hover:bg-[#f8d9a4]"
+            >
+              Ver minhas áreas de atuação
+              <ArrowRight size={16} />
+            </a>
+            <a
+              href="#especialidades"
+              className="group inline-flex items-center gap-1.5 border-b border-onDark/50 pb-1 text-sm font-semibold text-onDark transition-colors duration-200 hover:border-brandGold"
+            >
+              Conhecer especialidades
+              <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+            </a>
           </motion.div>
 
+          <motion.p
+            initial={shouldReduceMotion ? false : { opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.32 }}
+            className="mt-16 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.1em] text-onDark/75"
+          >
+            <span className="h-px w-6 bg-brandGold" aria-hidden="true" />
+            <strong className="font-bold text-onDark">15+ anos</strong>
+            de experiência em tecnologia.
+          </motion.p>
         </div>
+      </div>
+
+      <div className="relative mx-auto flex max-w-content flex-col gap-2 px-5 pb-6 text-[11px] font-semibold uppercase tracking-[0.13em] text-onDark/75 sm:flex-row sm:items-center sm:gap-8 md:px-8 lg:px-12 xl:px-16">
+        <span className="text-brandGold">Curitiba · PR</span>
+        <span>Atuação remota em todo o Brasil</span>
       </div>
     </section>
   );

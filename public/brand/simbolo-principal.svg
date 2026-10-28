@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Símbolo Diego Hartwig: Software, Dados e IA integrados"><defs>
+<linearGradient id="goldToGreen" x1="0" y1="0" x2="0.1" y2="1"><stop offset="0" stop-color="#F9E8C4"/><stop offset=".18" stop-color="#DEB77C"/><stop offset=".49" stop-color="#9DAB83"/><stop offset=".76" stop-color="#39C9A6"/><stop offset="1" stop-color="#1F9C81"/></linearGradient>
+<linearGradient id="goldToBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5DBAA"/><stop offset=".26" stop-color="#D8B780"/><stop offset=".54" stop-color="#5A999D"/><stop offset=".79" stop-color="#1789F5"/><stop offset="1" stop-color="#1363DA"/></linearGradient>
+<linearGradient id="greenToBlue" gradientUnits="userSpaceOnUse" x1="125" y1="368" x2="387" y2="368"><stop offset="0" stop-color="#44D5AA"/><stop offset=".42" stop-color="#249EAB"/><stop offset=".72" stop-color="#2489D7"/><stop offset="1" stop-color="#2483E8"/></linearGradient>
+<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".56"/><stop offset=".38" stop-color="#F1FDF7" stop-opacity=".06"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".30"/></linearGradient>
+<radialGradient id="sphereGold" cx=".35" cy=".27" r=".8"><stop offset="0" stop-color="#FFFAE8"/><stop offset=".24" stop-color="#F9DEAA"/><stop offset=".60" stop-color="#D2A968"/><stop offset="1" stop-color="#A6773C"/></radialGradient>
+<radialGradient id="sphereGreen" cx=".36" cy=".3" r=".85"><stop offset="0" stop-color="#F0FFF7"/><stop offset=".22" stop-color="#9BF5CF"/><stop offset=".55" stop-color="#3ACB9F"/><stop offset="1" stop-color="#098063"/></radialGradient>
+<radialGradient id="sphereBlue" cx=".35" cy=".30" r=".84"><stop offset="0" stop-color="#EAFBFF"/><stop offset=".20" stop-color="#9BD6FF"/><stop offset=".53" stop-color="#2A95FC"/><stop offset="1" stop-color="#1052B7"/></radialGradient>
+<radialGradient id="nodeSpark"><stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/><stop offset=".24" stop-color="#FFFFFF" stop-opacity=".75"/><stop offset=".65" stop-color="#FFFFFF" stop-opacity=".05"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient>
+<radialGradient id="haloGold"><stop offset="0" stop-color="#F3C982" stop-opacity=".15"/><stop offset=".42" stop-color="#F3C982" stop-opacity=".08"/><stop offset="1" stop-color="#F3C982" stop-opacity="0"/></radialGradient>
+<radialGradient id="haloGreen"><stop offset="0" stop-color="#2EC89F" stop-opacity=".17"/><stop offset=".42" stop-color="#2EC89F" stop-opacity=".07"/><stop offset="1" stop-color="#2EC89F" stop-opacity="0"/></radialGradient>
+<radialGradient id="haloBlue"><stop offset="0" stop-color="#3388F6" stop-opacity=".19"/><stop offset=".42" stop-color="#3388F6" stop-opacity=".09"/><stop offset="1" stop-color="#3388F6" stop-opacity="0"/></radialGradient>
+</defs>
+
+<g stroke-width="62" stroke-linecap="round" stroke-linejoin="round" fill="none">
+  <path d="M256 111 L125 368" stroke="url(#goldToGreen)"/>
+  <path d="M256 111 L387 368" stroke="url(#goldToBlue)"/>
+  <path d="M125 368 L387 368" stroke="url(#greenToBlue)"/>
+</g>
+<g fill="none" opacity=".36" stroke="url(#glass)" stroke-width="9" stroke-linecap="round"><path d="M241 113 L118 347"/><path d="M271 119 L404 350"/><path d="M132 351 L368 351"/></g>
+<g opacity=".28" fill="#F9FCFE"><path d="M230 145 L138 337 L169 324 L260 157 Z"/><path d="M282 137 L375 320 L345 311 L254 162 Z"/></g>
+<circle cx="256" cy="111" r="37.5" fill="url(#sphereGold)"/>
+<circle cx="125" cy="368" r="37.5" fill="url(#sphereGreen)"/>
+<circle cx="387" cy="368" r="37.5" fill="url(#sphereBlue)"/>
+<g opacity=".65" fill="none" stroke="#FFFFFF" stroke-width="1.4"><path d="M224 96 A35 35 0 0 1 276 78"/><path d="M95 354 A35 35 0 0 1 143 336"/><path d="M354 354 A35 35 0 0 1 408 339"/></g>
+<g opacity=".85"><circle cx="246" cy="99" r="22" fill="url(#nodeSpark)"/><circle cx="114" cy="356" r="22" fill="url(#nodeSpark)"/><circle cx="377" cy="355" r="22" fill="url(#nodeSpark)"/></g>
+</svg>

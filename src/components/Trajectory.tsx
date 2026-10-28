@@ -1,106 +1,109 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 
 const phases = [
   {
     number: "01",
-    subtitle: "Engenharia de Software",
-    title: "Base em Software",
+    subtitle: "Fundamentos",
+    title: "Base em engenharia de software",
     description:
-      "Fundação sólida em engenharia de software, sistemas distribuídos, APIs, arquitetura e automação. Experiência com ambientes críticos e práticas de qualidade de código.",
+      "Desenvolvimento de aplicações, integração de sistemas e atenção à qualidade e manutenção do código."
   },
   {
     number: "02",
-    subtitle: "Escala e Confiabilidade",
-    title: "Sistemas Reais",
+    subtitle: "Evolução e escala",
+    title: "Sistemas de maior criticidade",
     description:
-      "Atuação em sistemas de alta disponibilidade, integrações enterprise e ambientes complexos com foco em confiabilidade, observabilidade e entrega contínua.",
+      "Atuação em soluções complexas, com requisitos de confiabilidade, integração, disponibilidade e sustentação."
   },
   {
     number: "03",
-    subtitle: "Dados e Plataformas",
-    title: "Engenharia de Dados",
+    subtitle: "Dados e plataformas",
+    title: "Engenharia de dados",
     description:
-      "Consolidação em engenharia de dados: pipelines, lakehouse, orquestração, modelagem e governança. Construção de plataformas de dados escaláveis e confiáveis.",
+      "Arquitetura de processamento, pipelines, lakehouse, orquestração e operação de plataformas analíticas."
   },
   {
     number: "04",
-    subtitle: "Dados + Inteligência",
-    title: "IA Aplicada",
+    subtitle: "Próxima fronteira",
+    title: "Inteligência artificial aplicada",
     description:
-      "Expansão natural para IA aplicada: LLMs, RAG, agentes, visão computacional e automação inteligente. IA com base sólida em dados e engenharia — para uso real, não apenas demonstrações.",
-  },
+      "Aprofundamento em modelos de linguagem, RAG e agentes, com base sólida em dados e preparação de informação."
+  }
 ];
 
 export function Trajectory() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="autoridade" className="py-20 md:py-24">
-      <div className="mx-auto max-w-6xl px-5 md:px-8 xl:px-12">
+    <section id="trajetoria" className="py-20 md:py-28">
+      <div className="mx-auto max-w-content px-5 md:px-8 xl:px-12">
         <motion.p
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, ease: "easeOut" }}
-          className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400"
+          className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-stone"
         >
-          Trajetória
-        </motion.p>
-        <motion.h2
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.06, ease: "easeOut" }}
-          className="text-3xl font-extrabold tracking-tight text-white md:text-4xl"
-        >
-          Trajetória e especialização
-        </motion.h2>
-        <motion.p
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.12, ease: "easeOut" }}
-          className="mt-3 max-w-2xl text-slate-300"
-        >
-          Uma evolução coerente: a base em software fortalece a atuação em dados, e a atuação em dados
-          fortalece a aplicação real de IA.
+          04 / Trajetória
         </motion.p>
 
-        <motion.div
-          initial={shouldReduceMotion ? false : { opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.18 }}
-          className="mt-4 flex flex-wrap items-center gap-2"
-          aria-hidden="true"
-        >
-          {["Software", "Sistemas", "Dados", "IA"].map((step, i, arr) => (
-            <div key={step} className="flex items-center gap-2">
-              <span className="text-sm font-semibold text-slate-400">{step}</span>
-              {i < arr.length - 1 && <ArrowRight size={14} className="text-cyan-400/50" />}
-            </div>
-          ))}
-        </motion.div>
-
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {phases.map((phase, index) => (
-            <motion.article
-              key={phase.number}
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1fr] lg:gap-16">
+          <div>
+            <motion.h2
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-              className="relative rounded-2xl border border-slate-700/30 bg-slate-900/40 p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-500/50 hover:shadow-[0_12px_28px_-10px_rgba(2,6,23,0.7)]"
+              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.06, ease: "easeOut" }}
+              className="font-serif text-3xl font-medium leading-tight tracking-tight text-ink md:text-4xl"
             >
-              <p className="text-3xl font-black leading-none text-slate-600/60">{phase.number}</p>
-              <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-cyan-400">
-                {phase.subtitle}
+              Uma evolução
+              <br />
+              com <em className="font-serif italic text-bronze">continuidade.</em>
+            </motion.h2>
+            <motion.p
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.12, ease: "easeOut" }}
+              className="mt-4 max-w-md text-stone"
+            >
+              Uma base construída na engenharia de software, ampliada pela experiência em sistemas
+              críticos, plataformas de dados e IA aplicada.
+            </motion.p>
+
+            <motion.div
+              initial={shouldReduceMotion ? false : { opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.2 }}
+              className="mt-10 border-t border-line pt-6"
+            >
+              <p className="font-serif text-5xl font-medium text-bronze">15+</p>
+              <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-stone">
+                Anos de experiência em tecnologia
               </p>
-              <h3 className="mt-1 text-base font-bold text-white">{phase.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-300">{phase.description}</p>
-            </motion.article>
-          ))}
+            </motion.div>
+          </div>
+
+          <div className="divide-y divide-line border-t border-line">
+            {phases.map((phase, index) => (
+              <motion.article
+                key={phase.number}
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
+                className="grid grid-cols-[48px_1fr] gap-5 py-6 first:pt-0"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wider text-bronze">{phase.number}</p>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-stone">{phase.subtitle}</p>
+                  <h3 className="mt-1 font-serif text-lg font-medium text-ink">{phase.title}</h3>
+                  <p className="mt-2 max-w-2xl text-sm leading-relaxed text-stone">{phase.description}</p>
+                </div>
+              </motion.article>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
@@ -18,11 +18,83 @@ html {
 
 body {
   margin: 0;
-  font-family: "Plus Jakarta Sans", Inter, "Segoe UI", Roboto, sans-serif;
-  background-color: #020617;
-  color: #e2e8f0;
+  font-family: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+  background-color: #f6f4ef;
+  color: #182422;
 }
 
 * {
   box-sizing: border-box;
+}
+
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+::selection {
+  background-color: #1c3832;
+  color: #f6f4ef;
+}
+
+:focus-visible {
+  outline: 2px solid #1c3832;
+  outline-offset: 2px;
+}
+
+/*
+ * Hero imersivo (identidade V2): background decorativo (desktop.webp /
+ * mobile.webp), trocado via media query para que o navegador baixe apenas
+ * a imagem relevante para a viewport atual (ver docs/IDENTIDADE_VISUAL.md).
+ * Todo o texto do hero continua em HTML real, por cima da imagem.
+ */
+.hero-scene {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #051916;
+  background-image: url("/images/hero-desktop.webp");
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 17, 15, 0.82) 0%,
+    rgba(3, 17, 15, 0.55) 38%,
+    rgba(3, 17, 15, 0.18) 68%,
+    transparent 88%
+  );
+}
+
+.hero-scene::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 160px;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(3, 23, 18, 0.75), transparent);
+}
+
+@media (max-width: 790px) {
+  .hero-scene {
+    background-image: url("/images/hero-mobile.webp");
+    background-position: center 38%;
+  }
+
+  .hero-scene::before {
+    background: linear-gradient(
+      180deg,
+      rgba(2, 15, 13, 0.88) 0%,
+      rgba(2, 15, 13, 0.78) 32%,
+      rgba(2, 16, 14, 0.3) 62%,
+      rgba(2, 15, 13, 0.55) 100%
+    );
+  }
 }

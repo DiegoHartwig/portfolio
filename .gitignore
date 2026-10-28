@@ -62,3 +62,17 @@ Thumbs.db
 # ------------------------------
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# ------------------------------
+# Material de referência de design (mockups, kits de identidade) —
+# não publicado; os assets finais já estão copiados em public/.
+# ------------------------------
+/design/
+
+# ------------------------------
+# Documentos internos de processo (checklist de SEO, decisões de
+# identidade visual, pendências) — mantidos só localmente, repositório
+# é público.
+# ------------------------------
+/SEO-CHECKLIST.md
+/docs/
