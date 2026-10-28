@@ -1,27 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Símbolo Diego Hartwig: Software, Dados e IA integrados"><defs>
-<linearGradient id="goldToGreen" x1="0" y1="0" x2="0.1" y2="1"><stop offset="0" stop-color="#F9E8C4"/><stop offset=".18" stop-color="#DEB77C"/><stop offset=".49" stop-color="#9DAB83"/><stop offset=".76" stop-color="#39C9A6"/><stop offset="1" stop-color="#1F9C81"/></linearGradient>
-<linearGradient id="goldToBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5DBAA"/><stop offset=".26" stop-color="#D8B780"/><stop offset=".54" stop-color="#5A999D"/><stop offset=".79" stop-color="#1789F5"/><stop offset="1" stop-color="#1363DA"/></linearGradient>
-<linearGradient id="greenToBlue" gradientUnits="userSpaceOnUse" x1="125" y1="368" x2="387" y2="368"><stop offset="0" stop-color="#44D5AA"/><stop offset=".42" stop-color="#249EAB"/><stop offset=".72" stop-color="#2489D7"/><stop offset="1" stop-color="#2483E8"/></linearGradient>
-<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".56"/><stop offset=".38" stop-color="#F1FDF7" stop-opacity=".06"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".30"/></linearGradient>
-<radialGradient id="sphereGold" cx=".35" cy=".27" r=".8"><stop offset="0" stop-color="#FFFAE8"/><stop offset=".24" stop-color="#F9DEAA"/><stop offset=".60" stop-color="#D2A968"/><stop offset="1" stop-color="#A6773C"/></radialGradient>
-<radialGradient id="sphereGreen" cx=".36" cy=".3" r=".85"><stop offset="0" stop-color="#F0FFF7"/><stop offset=".22" stop-color="#9BF5CF"/><stop offset=".55" stop-color="#3ACB9F"/><stop offset="1" stop-color="#098063"/></radialGradient>
-<radialGradient id="sphereBlue" cx=".35" cy=".30" r=".84"><stop offset="0" stop-color="#EAFBFF"/><stop offset=".20" stop-color="#9BD6FF"/><stop offset=".53" stop-color="#2A95FC"/><stop offset="1" stop-color="#1052B7"/></radialGradient>
-<radialGradient id="nodeSpark"><stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/><stop offset=".24" stop-color="#FFFFFF" stop-opacity=".75"/><stop offset=".65" stop-color="#FFFFFF" stop-opacity=".05"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient>
-<radialGradient id="haloGold"><stop offset="0" stop-color="#F3C982" stop-opacity=".15"/><stop offset=".42" stop-color="#F3C982" stop-opacity=".08"/><stop offset="1" stop-color="#F3C982" stop-opacity="0"/></radialGradient>
-<radialGradient id="haloGreen"><stop offset="0" stop-color="#2EC89F" stop-opacity=".17"/><stop offset=".42" stop-color="#2EC89F" stop-opacity=".07"/><stop offset="1" stop-color="#2EC89F" stop-opacity="0"/></radialGradient>
-<radialGradient id="haloBlue"><stop offset="0" stop-color="#3388F6" stop-opacity=".19"/><stop offset=".42" stop-color="#3388F6" stop-opacity=".09"/><stop offset="1" stop-color="#3388F6" stop-opacity="0"/></radialGradient>
-</defs>
-
-<g stroke-width="62" stroke-linecap="round" stroke-linejoin="round" fill="none">
-  <path d="M256 111 L125 368" stroke="url(#goldToGreen)"/>
-  <path d="M256 111 L387 368" stroke="url(#goldToBlue)"/>
-  <path d="M125 368 L387 368" stroke="url(#greenToBlue)"/>
-</g>
-<g fill="none" opacity=".36" stroke="url(#glass)" stroke-width="9" stroke-linecap="round"><path d="M241 113 L118 347"/><path d="M271 119 L404 350"/><path d="M132 351 L368 351"/></g>
-<g opacity=".28" fill="#F9FCFE"><path d="M230 145 L138 337 L169 324 L260 157 Z"/><path d="M282 137 L375 320 L345 311 L254 162 Z"/></g>
-<circle cx="256" cy="111" r="37.5" fill="url(#sphereGold)"/>
-<circle cx="125" cy="368" r="37.5" fill="url(#sphereGreen)"/>
-<circle cx="387" cy="368" r="37.5" fill="url(#sphereBlue)"/>
-<g opacity=".65" fill="none" stroke="#FFFFFF" stroke-width="1.4"><path d="M224 96 A35 35 0 0 1 276 78"/><path d="M95 354 A35 35 0 0 1 143 336"/><path d="M354 354 A35 35 0 0 1 408 339"/></g>
-<g opacity=".85"><circle cx="246" cy="99" r="22" fill="url(#nodeSpark)"/><circle cx="114" cy="356" r="22" fill="url(#nodeSpark)"/><circle cx="377" cy="355" r="22" fill="url(#nodeSpark)"/></g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="390" viewBox="0 0 430 390" role="img" aria-label="Monograma DH — Diego Hartwig"><title>DH — Diego Hartwig</title><defs>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2=".2" gradientUnits="objectBoundingBox">
+ <stop offset="0%" stop-color="#80542C"/><stop offset="15%" stop-color="#EBC187"/><stop offset="32%" stop-color="#FFF1C9"/><stop offset="45%" stop-color="#BD8041"/><stop offset="60%" stop-color="#FCE0A7"/><stop offset="78%" stop-color="#C38F54"/><stop offset="100%" stop-color="#F5CC8C"/>
+</linearGradient>
+<linearGradient id="goldLight" x1="0" y1="0" x2="1" y2=".5"><stop stop-color="#744A26"/><stop offset="38%" stop-color="#A56C3E"/><stop offset="59%" stop-color="#D6A66C"/><stop offset="100%" stop-color="#704321"/></linearGradient>
+<linearGradient id="tri" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#E6B879"/><stop offset="60%" stop-color="#B18A55"/><stop offset="82%" stop-color="#159A97"/><stop offset="100%" stop-color="#398DF6"/></linearGradient>
+<linearGradient id="bright" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FAE7C6"/><stop offset="53%" stop-color="#DCB583"/><stop offset="85%" stop-color="#3EAFBB"/><stop offset="100%" stop-color="#307FE0"/></linearGradient>
+<linearGradient id="nameGold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#C19055"/><stop offset="35%" stop-color="#FFDFAC"/><stop offset="70%" stop-color="#CD9454"/><stop offset="100%" stop-color="#FBE3B8"/></linearGradient>
+<radialGradient id="flare"><stop stop-color="#FFF8DE" stop-opacity=".95"/><stop offset="40%" stop-color="#F8C981" stop-opacity=".36"/><stop offset="100%" stop-color="#F8C981" stop-opacity="0"/></radialGradient>
+<filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs><circle cx="215" cy="195" r="153" fill="none" stroke="url(#tri)" stroke-width=".9" opacity="0.13"/>
+<path d="M 214 43 L 39 335 L 391 335 Z" fill="none" stroke="url(#tri)" stroke-width="1.6" opacity="0.37" stroke-linejoin="round"/>
+<path d="M 214 75 L 87 316 M 214 75 L 350 316 M 87 316 L 350 316" fill="none" stroke="url(#tri)" stroke-width=".6" opacity=".15"/>
+<path d="M 20 220 H 407 M 214 23 V 360" fill="none" stroke="url(#tri)" stroke-width=".7" opacity="0.12"/>
+<g><path d="M691 336C691 443 664 527 609 590C555 653 481 684 388 685C310 686 247 686 199 685C147 684 95 686 44 689V658H138V31H44V0C87 1 134 2 184 2C245 1 312 0 385 -2C466 -5 537 28 598 95C660 162 691 243 691 336ZM585 339C586 250 571 180 538 127C505 70 454 37 386 27C375 26 361 25 343 25C311 25 272 27 227 31V654C276 660 330 661 388 658C462 652 515 617 546 554C571 505 584 434 585 339Z" transform="translate(64.00 285.00) scale(0.2380000 -0.2380000)" fill="url(#gold)" /><path d="M718 31H625V658H718V689H440V658H534V380H227V658H320V689H44V658H138V31H44V0H320V31H227V345H534V31H440V0H718Z" transform="translate(209.00 285.00) scale(0.2360000 -0.2360000)" fill="url(#gold)" /></g>
+<path d="M 317 300 L 390 300 L 398 322 L 342 322 Z" fill="url(#tri)" opacity=".42"/>
+<path d="M 81 325 H 387" fill="none" stroke="url(#bright)" stroke-width="1.4" opacity=".9"/>
+<g opacity=".92"><circle cx="214" cy="43" r="21.0" fill="url(#flare)"/>
+    <path d="M 214 25.15 L 215.68 40.9 L 228.7 43 L 215.68 45.1 L 214 60.85 L 212.32 45.1 L 199.3 43 L 212.32 40.9 Z" fill="#FBE1AA" opacity=".94"/>
+    <circle cx="214" cy="43" r="2.205" fill="#FFF8E5"/></g>
+<g opacity=".92"><circle cx="109" cy="220" r="6.800000000000001" fill="url(#flare)"/>
+    <path d="M 109 214.22 L 109.544 219.32 L 113.76 220 L 109.544 220.68 L 109 225.78 L 108.456 220.68 L 104.24 220 L 108.456 219.32 Z" fill="#FBE1AA" opacity=".94"/>
+    <circle cx="109" cy="220" r="0.7140000000000001" fill="#FFF8E5"/></g>
+<g opacity=".92"><circle cx="332" cy="221" r="6.2" fill="url(#flare)"/>
+    <path d="M 332 215.73 L 332.496 220.38 L 336.34 221 L 332.496 221.62 L 332 226.27 L 331.504 221.62 L 327.66 221 L 331.504 220.38 Z" fill="#FBE1AA" opacity=".94"/>
+    <circle cx="332" cy="221" r="0.651" fill="#FFF8E5"/></g>
+<g opacity=".92"><circle cx="214" cy="324" r="13.0" fill="url(#flare)"/>
+    <path d="M 214 312.95 L 215.04 322.7 L 223.1 324 L 215.04 325.3 L 214 335.05 L 212.96 325.3 L 204.9 324 L 212.96 322.7 Z" fill="#FBE1AA" opacity=".94"/>
+    <circle cx="214" cy="324" r="1.3650000000000002" fill="#FFF8E5"/></g></svg>

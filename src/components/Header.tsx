@@ -60,9 +60,9 @@ export function Header() {
               src="/brand/simbolo-principal.svg"
               alt=""
               aria-hidden="true"
-              width={44}
-              height={44}
-              className="h-10 w-10 shrink-0 sm:h-11 sm:w-11"
+              width={430}
+              height={390}
+              className="h-10 w-auto shrink-0 sm:h-11"
             />
             <span className="leading-tight">
               <span className="block text-sm font-bold uppercase tracking-[0.1em] text-onDark sm:text-base">
