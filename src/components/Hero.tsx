@@ -83,10 +83,6 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative mx-auto flex max-w-content flex-col gap-2 px-5 pb-6 text-[11px] font-semibold uppercase tracking-[0.13em] text-onDark/75 sm:flex-row sm:items-center sm:gap-8 md:px-8 lg:px-12 xl:px-16">
-        <span className="text-brandGold">Curitiba · PR</span>
-        <span>Atuação remota em todo o Brasil</span>
-      </div>
     </section>
   );
 }

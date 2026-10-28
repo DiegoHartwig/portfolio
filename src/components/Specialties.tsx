@@ -146,11 +146,6 @@ export function Specialties() {
           ))}
         </div>
 
-        <p className="mt-8 max-w-3xl text-xs leading-relaxed text-stone">
-          Estas são frentes de atuação técnica, não um portfólio de clientes. Estudos de caso e
-          projetos concretos podem ser incorporados ao portfólio futuramente, com autorização e
-          evidências.
-        </p>
       </div>
     </section>
   );
