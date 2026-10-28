@@ -4,30 +4,30 @@ const phases = [
   {
     number: "01",
     subtitle: "Fundamentos",
-    title: "Base em engenharia de software",
+    title: "Engenharia de software como alicerce",
     description:
-      "Desenvolvimento de aplicações, integração de sistemas e atenção à qualidade e manutenção do código."
+      "Desenvolvimento de aplicações, integração entre sistemas e compreensão de regras de negócio, consolidando uma base sólida em arquitetura, qualidade e evolução de software."
   },
   {
     number: "02",
-    subtitle: "Evolução e escala",
-    title: "Sistemas de maior criticidade",
+    subtitle: "Experiência e Modernização",
+    title: "Sistemas legados e ambientes críticos",
     description:
-      "Atuação em soluções complexas, com requisitos de confiabilidade, integração, disponibilidade e sustentação."
+      "Experiência em sistemas de alta complexidade e criticidade, incluindo sustentação, refatoração, modernização de aplicações legadas e evolução tecnológica, preservando a continuidade operacional e as regras de negócio."
   },
   {
     number: "03",
-    subtitle: "Dados e plataformas",
-    title: "Engenharia de dados",
+    subtitle: "Arquiteturas Modernas",
+    title: "Engenharia e modernização de dados",
     description:
-      "Arquitetura de processamento, pipelines, lakehouse, orquestração e operação de plataformas analíticas."
+      "Projeto, construção e modernização de plataformas de dados, com arquiteturas Lakehouse, pipelines, processamento distribuído e orquestração, utilizando tecnologias como Spark, Airflow, dbt, Trino e ClickHouse."
   },
   {
     number: "04",
-    subtitle: "Próxima fronteira",
-    title: "Inteligência artificial aplicada",
+    subtitle: "Inovação e IA Aplicada",
+    title: "Engenharia de dados para inteligência artificial",
     description:
-      "Aprofundamento em modelos de linguagem, RAG e agentes, com base sólida em dados e preparação de informação."
+      "Preparação e estruturação de dados para IA, com aprofundamento em modelos de linguagem, RAG, busca semântica e agentes inteligentes, conectando a experiência em software e dados às novas possibilidades da inteligência artificial."
   }
 ];
 
@@ -56,7 +56,7 @@ export function Trajectory() {
               transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.06, ease: "easeOut" }}
               className="font-serif text-3xl font-medium leading-tight tracking-tight text-ink md:text-4xl"
             >
-              Uma evolução
+              Do legado à inovação,
               <br />
               com <em className="font-serif italic text-bronze">continuidade.</em>
             </motion.h2>
@@ -67,8 +67,10 @@ export function Trajectory() {
               transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.12, ease: "easeOut" }}
               className="mt-4 max-w-md text-stone"
             >
-              Uma base construída na engenharia de software, ampliada pela experiência em sistemas
-              críticos, plataformas de dados e IA aplicada.
+              Mais de 15 anos de experiência conectando diferentes gerações de tecnologia. Uma
+              trajetória construída no desenvolvimento e sustentação de sistemas críticos, na
+              modernização de aplicações legadas e na evolução para arquiteturas modernas,
+              plataformas de dados e inteligência artificial.
             </motion.p>
 
             <motion.div

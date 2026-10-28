@@ -5,22 +5,40 @@ const disciplines = [
     number: "01",
     title: "Engenharia de Software",
     description:
-      "Arquitetura, integração entre sistemas, desenvolvimento de aplicações e evolução de soluções que precisam ser compreensíveis, resilientes e sustentáveis.",
-    tags: "ARQUITETURA DE SISTEMAS · APIS · PYTHON · INTEGRAÇÕES"
+      "Da concepção de novas soluções à modernização de sistemas legados, com sólida experiência em arquitetura, desenvolvimento, refatoração e integração de aplicações, priorizando qualidade, escalabilidade e continuidade operacional.",
+    tags: [
+      "ARQUITETURA DE SISTEMAS",
+      "PLANEJAMENTO DE SOLUÇÕES",
+      "DESENVOLVIMENTO DE SOFTWARE",
+      "APIs & INTEGRAÇÕES",
+      "MODERNIZAÇÃO & REFATORAÇÃO DE SISTEMAS LEGADOS"
+    ]
   },
   {
     number: "02",
     title: "Engenharia de Dados",
     description:
-      "Desenho de pipelines, plataformas analíticas, processamento distribuído, orquestração, modelagem e governança para transformar dados em ativos confiáveis.",
-    tags: "SPARK · AIRFLOW · DBT · TRINO · LAKEHOUSE"
+      "Arquitetura, construção e modernização de plataformas de dados, evoluindo ambientes legados para soluções modernas e escaláveis, com pipelines, processamento distribuído, orquestração e governança.",
+    tags: [
+      "ARQUITETURA DE DADOS",
+      "MODERNIZAÇÃO DE PLATAFORMAS DE DADOS",
+      "PIPELINES ETL/ELT",
+      "LAKEHOUSE",
+      "ORQUESTRAÇÃO & GOVERNANÇA"
+    ]
   },
   {
     number: "03",
     title: "Inteligência Artificial Aplicada",
     description:
-      "Uso de IA conectado a necessidades concretas: preparação de dados, soluções com modelos de linguagem, recuperação de informação e integração com sistemas reais.",
-    tags: "LLMS · RAG · AGENTES · IA EM PRODUTOS"
+      "Preparação e engenharia de dados para inteligência artificial, com foco em modelos de linguagem, RAG, agentes inteligentes e integração de soluções de IA a sistemas e processos corporativos.",
+    tags: [
+      "PREPARAÇÃO DE DADOS PARA IA",
+      "ENGENHARIA DE DADOS PARA IA",
+      "LLMS & RAG",
+      "AGENTES DE IA",
+      "INTEGRAÇÃO COM SISTEMAS"
+    ]
   }
 ];
 
@@ -82,7 +100,16 @@ export function Expertise() {
               <div>
                 <h3 className="font-serif text-xl font-medium text-ink">{item.title}</h3>
                 <p className="mt-3 max-w-2xl text-sm leading-relaxed text-stone">{item.description}</p>
-                <p className="mt-5 text-xs font-medium uppercase tracking-wide text-stone">{item.tags}</p>
+                <ul className="mt-5 flex flex-wrap gap-2">
+                  {item.tags.map((tag) => (
+                    <li
+                      key={tag}
+                      className="rounded-full border border-bronze/25 bg-bronze/[0.06] px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-bronze"
+                    >
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </motion.article>
           ))}
